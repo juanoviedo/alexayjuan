@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Declaración de Amor a Alexandra Peña</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      opacity: 0;
+    }
+
+    h1 {
+      color: #ff4c4c;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 1.5;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .image-container {
+      margin-top: 40px;
+    }
+
+    img {
+      width: 300px;
+      height: auto;
+      border-radius: 50%;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .flower-container {
+      position: relative;
+    }
+
+    .flower {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50px;
+      height: 50px;
+      background-image: url('img/flor.PNG');
+      background-size: cover;
+      animation: flowerAnimation 6s infinite;
+    }
+
+    @keyframes flowerAnimation {
+      0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+      }
+      100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+      }
+    }
+
+    .flower-1 {
+      animation-delay: 0s;
+    }
+
+    .flower-2 {
+      animation-delay: 1s;
+    }
+
+    .flower-3 {
+      animation-delay: 2s;
+    }
+
+    .flower-4 {
+      animation-delay: 3s;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Declaración de Amor a Alexandra Peña</h1>
+    <div class="image-container">
+      <img src="img/alexa.PNG" alt="Imagen de Alexandra Peña">
+    </div>
+    <p>Querida Alexandra,</p>
+    <p>Desde el momento en que te conocí, supe que eras especial. Tu belleza, dulzura y carisma han conquistado mi corazón de una manera que nunca pensé posible.</p>
+    <p>Eres la persona que ilumina mi vida y me llena de felicidad. Cada momento a tu lado es un regalo preciado que atesoro con todo mi ser.</p>
+    <p>Quiero expresarte todo mi amor y gratitud por tu presencia en mi vida. Eres mi compañera, mi confidente y mi mayor apoyo. No puedo imaginar mi vida sin ti.</p>
+    <p>Alexandra, te amo más de lo que las palabras pueden describir. Mi deseo es hacerte feliz cada día y construir un futuro juntos lleno de amor y alegría.</p>
+    <p>Con todo mi amor,</p>
+    <p>Tu Juan</p>
+  </div>
+
+  <div class="flower-container">
+    <div class="flower flower-1"></div>
+    <div class="flower flower-2"></div>
+    <div class="flower flower-3"></div>
+    <div class="flower flower-4"></div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+  <script>
+    gsap.to(".container", { opacity: 1, duration: 1, delay: 0.5 });
+    gsap.from("h1", { opacity: 0, y: -50, duration: 1, delay: 1 });
+    gsap.from("img", { opacity: 0, scale: 0.5, duration: 1, delay: 1.5 });
+    gsap.from("p", { opacity: 0, y: 50, duration: 1, delay: 2, stagger: 0.3 });
+    gsap.from(".flower", { opacity: 0, scale: 0, duration: 1, delay: 2.5, stagger: 0.2 });
+  </script>
+</body>
+</html>
